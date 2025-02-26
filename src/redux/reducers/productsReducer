@@ -1,0 +1,14 @@
+import { FETCH_PRODUCTS} from "../actions/actions"
+
+const initState = { products :[]} ;
+export const productsReducer = ( state = initState , action) => {
+    let updatedState; 
+    switch (action.type){
+            case  FETCH_PRODUCTS:
+            updatedState = {...state , products: action.payload }
+            return updatedState;
+
+        default :
+    return state;
+    }
+}
